@@ -1,0 +1,13 @@
+.custom-bg{
+    background-color: white;
+}
+.px-custom {
+    padding-left: 3rem;  
+    padding-right: 3rem; 
+  }
+  @media screen and (max-width: 700px) {
+    .px-custom{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+  }

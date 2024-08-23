@@ -4,7 +4,9 @@
 .btn-container{
     gap: 10px;
 }
-
+.custom-bg{
+    background-color: #1DB954;
+}
 @media screen and (max-width: 950px) {
     .btn-container{
         margin: 10px;

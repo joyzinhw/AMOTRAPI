@@ -8,10 +8,9 @@ import SearchForm from "../searchBar/SearchForm";
 import LoginButton from "../buttons/LoginButton";
 import SignUpButton from "../buttons/SignUpButton";
 
-function Header() {
+function Header(props) {
     return (
         <div>
-
             <Navbar expand="lg" className="custom-navBar mb-5">
                 <Container>
                     <Navbar.Brand href="#home">LOGO</Navbar.Brand>
@@ -31,13 +30,14 @@ function Header() {
                                 </NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
-                        <div className="me-auto custom-search">
-                            <SearchForm />
+                        {/* Caso eu queira voltar como estava devo por o mx */}
+                        <div className="mb-auto custom-search">
+                            <SearchForm color='green' />
                         </div>
-                        <div className="btn-container d-flex">
+                        {/* <div className="btn-container d-flex">
                             <LoginButton />
                             <SignUpButton />
-                        </div>
+                        </div> */}
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

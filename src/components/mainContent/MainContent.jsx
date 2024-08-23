@@ -17,7 +17,7 @@ function MainContent() {
             </h1>
             <p className="lead">Pesquise pelo seu artista favorito no nosso sistema</p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-            < SearchForm />
+            < SearchForm color='black'/>
             </div>
           </Col>
           <Col lg={4} className="offset-lg-1 p-0 overflow-hidden">

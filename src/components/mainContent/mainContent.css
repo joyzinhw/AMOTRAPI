@@ -1,3 +1,6 @@
+.custom-bg{
+    background-color: #1DB954;
+}
 .costum-mt{
     margin: 20rem;
 }
@@ -9,6 +12,7 @@
     justify-content: center;
     align-items: center;
 }
+
 
 .svg-container img,
 .svg-container svg {
