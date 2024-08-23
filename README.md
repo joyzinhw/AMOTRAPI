@@ -7,7 +7,7 @@ O sistema será uma aplicação reativa simples que permite aos usuários pesqui
 ## TECNOLOGIAS
 
 - React.JS
-- Api do Sportfy
+- [Api do Sportfy](https://github.com/safelydan/apiSpotifyArtists)
 - Kafka
 - JavaScrip
 
@@ -23,12 +23,12 @@ O sistema será uma aplicação reativa simples que permite aos usuários pesqui
    ```
    cd /MelodySearch/src
    ```
-3. instalar o yarn para todas instalar todas as dependências listadas no arquivo
+3. instalar o yarn para todas instalar as dependências listadas no arquivo
 
    ```
    yarn install
    ```
-4. instalar as dependecias
+4. instalar dependecias
 
    ```
    yarn add @popperjs/core
