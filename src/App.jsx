@@ -20,6 +20,7 @@ function App() {
       <Header />
       <MainContent />
       <Footer color='normal'/>
+      
     </div>
   )
 }
