@@ -1,0 +1,17 @@
+.custom-navBar{
+    text-align: start;
+}
+.btn-container{
+    gap: 10px;
+}
+.custom-bg{
+    background-color: #1DB954;
+}
+@media screen and (max-width: 950px) {
+    .btn-container{
+        margin: 10px;
+    }
+    .custom-search{
+        margin-top: 10px;
+    }
+}

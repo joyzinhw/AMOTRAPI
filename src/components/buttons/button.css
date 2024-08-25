@@ -1,0 +1,11 @@
+.custom-button{
+    border-radius: 15px;
+}
+.custom-login-button{
+    text-decoration: none;
+    color: black;
+}
+.custom-login-button:hover{
+    background-color: #424649;
+    color: white;
+}

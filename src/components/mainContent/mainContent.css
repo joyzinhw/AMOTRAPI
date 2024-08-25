@@ -1,0 +1,21 @@
+.custom-bg{
+    background-color: #1DB954;
+}
+.costum-mt{
+    margin: 20rem;
+}
+.svg-container {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.svg-container img,
+.svg-container svg {
+    width: 100%;
+    height: auto;
+}
