@@ -31,6 +31,9 @@ O sistema será uma aplicação reativa simples que permite aos usuários pesqui
 4. instalar dependecias
 
    ```
+   yarn add vite
+   ```
+   ```
    yarn add @popperjs/core
    ```
 5. rodar o projeto
