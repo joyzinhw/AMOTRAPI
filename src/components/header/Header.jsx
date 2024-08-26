@@ -22,11 +22,10 @@ function Header(props) {
               className="d-inline-block align-top"
             />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
         </Container>
       </Navbar>
     </div>
   );
 }
 
-export default Header;
+export default Header;""
