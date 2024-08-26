@@ -18,9 +18,10 @@ function App() {
     // </>
     <div className='custom-bg'>
       <Header />
-      <MainContent />
-      <Footer color='normal'/>
-      
+      <div className="main-content">
+        <MainContent />
+      </div>
+      <Footer color='normal' />
     </div>
   )
 }

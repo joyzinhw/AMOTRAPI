@@ -5,9 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import mainImage from "../../assets/images/download-(4).svg";
 import SearchForm from "../searchBar/SearchForm";
-import ArtistsInfo from "../albums/Albums";
-
-
+import ArtistsInfo from "../artistInfo/ArtistsInfo";
 
 function MainContent() {
   const [artistInfo, setArtistInfo] = useState(null);
@@ -26,7 +24,10 @@ function MainContent() {
             <SearchForm color="black" setArtistInfo={setArtistInfo} />
           </div>
           {artistInfo && artistInfo.albums && artistInfo.artist && (
-            <ArtistsInfo artist={artistInfo.artist} albums={artistInfo.albums} />
+            <ArtistsInfo
+              artist={artistInfo.artist}
+              albums={artistInfo.albums}
+            />
           )}
         </Col>
         <Col lg={4} className="offset-lg-1 p-0 overflow-hidden">

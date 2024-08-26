@@ -42,8 +42,26 @@ function Footer(props){
             </Col>
             <Col md={4}>
               <Nav className="justify-content-end">
-
-
+                <Nav.Item>
+                  <Nav.Link href="http://localhost:5173/" className="px-2 text-body-secondary">
+                    Home
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href="#" className="px-2 text-body-secondary">
+                    Features
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href="#" className="px-2 text-body-secondary">
+                    Pricing
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href="#" className="px-2 text-body-secondary">
+                    FAQs
+                  </Nav.Link>
+                </Nav.Item>
                 <Nav.Item>
                   <Nav.Link href="#" className="px-2 text-body-secondary">
                     About
