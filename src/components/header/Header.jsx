@@ -9,26 +9,26 @@ import LoginButton from "../buttons/LoginButton";
 import SignUpButton from "../buttons/SignUpButton";
 
 function Header(props) {
-    return (
-        <div>
-            <Navbar expand="lg" className="custom-navBar mb-5">
-            <Container>
-  <Navbar.Brand href="#home">
-    <img
-      src="../src/assets/images/image.png"
-      alt="Logo"
-      width="100"
-      height="100"
-      className="d-inline-block align-top"
-    />
-  </Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-</Container>
+  return (
+    <div>
+      <Navbar expand="lg" className="custom-navBar mb-5">
+        <Container>
+          <Navbar.Brand href="#home">
+            <img
+              src="../src/assets/images/image.png"
+              alt="Logo"
+              width="100"
+              height="100"
+              className="d-inline-block align-top"
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        </Container>
 
-            </Navbar>
+      </Navbar>
 
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Header 

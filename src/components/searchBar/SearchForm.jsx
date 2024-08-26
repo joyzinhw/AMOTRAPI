@@ -74,7 +74,6 @@ function SearchForm({ setArtistInfo, color }) {
           variant="outline-dark"
           type="submit"
           className='custom-search-button'
-          style={addCorButton()}
         >
           Buscar
         </Button>

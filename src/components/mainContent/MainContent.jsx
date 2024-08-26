@@ -3,7 +3,7 @@ import "./mainContent.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import mainImage from "../../assets/images/MainPicLandingPage.svg";
+import mainImage from "../../assets/images/download-(4).svg";
 import SearchForm from "../searchBar/SearchForm";
 import ArtistsInfo from "../albums/Albums";
 
