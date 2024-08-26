@@ -12,11 +12,19 @@ function Header(props) {
     return (
         <div>
             <Navbar expand="lg" className="custom-navBar mb-5">
-                <Container>
-                    <Navbar.Brand href="#home">LOGO</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Container>
+  <Navbar.Brand href="#home">
+    <img
+      src="../src/assets/images/image.png"
+      alt="Logo"
+      width="100"
+      height="100"
+      className="d-inline-block align-top"
+    />
+  </Navbar.Brand>
+  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+</Container>
 
-                </Container>
             </Navbar>
 
         </div>
