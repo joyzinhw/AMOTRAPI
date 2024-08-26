@@ -1,16 +1,27 @@
-.custom-bg{
-    background-color: white;
+/* Define a altura mínima do corpo da página para ocupar a tela inteira */
+.custom-bg {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: white;
 }
 
+/* Ajusta o conteúdo principal para ocupar o espaço disponível */
+.main-content {
+  flex: 1;
+}
+
+/* Mantém o footer no final da página */
 .footer {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-top: 1rem;
+  background-color: #f8f9fa;
 }
 
 @media screen and (max-width: 700px) {
-  footer {
-      padding-top: 0.25rem;
-      padding-bottom: 0.25rem;
-  }
+.footer {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
 }

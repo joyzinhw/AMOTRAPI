@@ -43,7 +43,7 @@ function Footer(props){
             <Col md={4}>
               <Nav className="justify-content-end">
                 <Nav.Item>
-                  <Nav.Link href="#" className="px-2 text-body-secondary">
+                  <Nav.Link href="http://localhost:5173/" className="px-2 text-body-secondary">
                     Home
                   </Nav.Link>
                 </Nav.Item>
