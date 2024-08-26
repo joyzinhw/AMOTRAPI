@@ -7,8 +7,6 @@ import mainImage from "../../assets/images/MainPicLandingPage.svg";
 import SearchForm from "../searchBar/SearchForm";
 import ArtistsInfo from "../albums/Albums";
 
-
-
 function MainContent() {
   const [artistInfo, setArtistInfo] = useState(null);
 
@@ -26,7 +24,10 @@ function MainContent() {
             <SearchForm color="black" setArtistInfo={setArtistInfo} />
           </div>
           {artistInfo && artistInfo.albums && artistInfo.artist && (
-            <ArtistsInfo artist={artistInfo.artist} albums={artistInfo.albums} />
+            <ArtistsInfo
+              artist={artistInfo.artist}
+              albums={artistInfo.albums}
+            />
           )}
         </Col>
         <Col lg={4} className="offset-lg-1 p-0 overflow-hidden">
