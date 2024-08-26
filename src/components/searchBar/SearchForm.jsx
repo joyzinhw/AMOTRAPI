@@ -34,32 +34,6 @@ function SearchForm({ setArtistInfo, color }) {
     fetchArtistInfo();
   };
 
-  function adicionarCor() {
-    if (color === "green") {
-      return {
-        backgroundColor: "#1DB954",
-        color: "#FFF",
-        border: "1px solid #000000",
-      };
-    }
-    return {
-      backgroundColor: "#FFFFFF",
-      color: "#000000",
-    };
-  }
-
-  function addCorButton() {
-    if (color === "black") {
-      return {
-        backgroundColor: "#212529",
-        color: "#FFFFFF",
-      };
-    }
-    return {
-      backgroundColor: "#FFFFFF",
-      color: "#000000",
-    };
-  }
 
   return (
     <div>
@@ -75,13 +49,11 @@ function SearchForm({ setArtistInfo, color }) {
           aria-label="Search"
           value={artistName}
           onChange={(e) => setArtistName(e.target.value)}
-          style={adicionarCor()}
         />
         <Button
-          variant="outline-dark"
+          variant="dark"
           type="submit"
           className="custom-search-button"
-          style={addCorButton()}
         >
           Buscar
         </Button>

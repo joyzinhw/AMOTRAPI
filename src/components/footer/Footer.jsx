@@ -6,22 +6,8 @@ import Nav from 'react-bootstrap/Nav';
 function Footer(props){
   let cor = props.color;
 
-  function adicionarCor() {
-    if (cor === 'green') {
-      return {
-        backgroundColor: '#1DB954',
-        color: '#FFF',
-
-      };
-    }
-    // Adicione outros estilos conforme necessário
-    return {
-      backgroundColor: '#FFFFFF',
-      color: '#000000', // Cor do texto padrão (preto)
-    };
-  }
     return(
-        <Container fluid style={adicionarCor()} className="px-custom" >
+        <Container fluid  className="px-3" >
         <div className="px-custom">
           <footer className="d-flex flex-wrap justify-content-between align-items-center py-3">
             <Col md={4} className="mb-0 text-body-secondary">
@@ -47,21 +33,7 @@ function Footer(props){
                     Home
                   </Nav.Link>
                 </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link href="#" className="px-2 text-body-secondary">
-                    Features
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link href="#" className="px-2 text-body-secondary">
-                    Pricing
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link href="#" className="px-2 text-body-secondary">
-                    FAQs
-                  </Nav.Link>
-                </Nav.Item>
+
                 <Nav.Item>
                   <Nav.Link href="#" className="px-2 text-body-secondary">
                     About

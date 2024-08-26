@@ -21,7 +21,7 @@ function App() {
       <div className="main-content">
         <MainContent />
       </div>
-      <Footer color='normal' />
+      <Footer/>
     </div>
   )
 }

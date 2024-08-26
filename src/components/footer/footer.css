@@ -10,6 +10,10 @@
 .main-content {
   flex: 1;
 }
+.px-custom{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 
 /* Mantém o footer no final da página */
 .footer {
