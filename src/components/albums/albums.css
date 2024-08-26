@@ -27,11 +27,23 @@
   
   .album a {
     font-size: 0.9rem;
-    color: #000000; /* Spotify green */
+    color: #ffffff; /* Spotify green */
     text-decoration: none;
   }
   
-  .album a:hover {
-    text-decoration: underline;
-  }
+
   
+.album-bottom {
+  border-radius: 15px;
+  background-color:  #1674aa;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  justify-items: center;
+}
+
+.album-bottom:hover{
+  background-color: #021625;
+  color: white;
+  text-decoration: none;
+}

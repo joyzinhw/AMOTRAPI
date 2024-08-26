@@ -18,14 +18,16 @@ function ArtistsInfo({ artist, albums }) {
             : "Genres not available"}
         </p>
         <p className="biography">{artist.biography}</p>
+        
+       
         <a
           href={artist.artistUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-success"
-        >
+          className="album-bottom btn">
           Ver no Spotify
         </a>
+        
       </div>
 
       <div className="album-grid">
@@ -38,9 +40,11 @@ function ArtistsInfo({ artist, albums }) {
               <img src={album.coverImage} alt={album.name} />
               <h3>{album.name}</h3>
               <p>{dataFormatada}</p>
+              <div className="album-bottom">
               <a href={album.url} target="_blank" rel="noopener noreferrer">
                 Escutar no Spotify
               </a>
+            </div>
             </div>
           );
         })}
