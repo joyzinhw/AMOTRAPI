@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import mainImage from "../../assets/images/MainPicLandingPage.svg";
 import SearchForm from "../searchBar/SearchForm";
-import ArtistsInfo from "../albums/Albums";
+import ArtistsInfo from "../artistInfo/ArtistsInfo";
 
 function MainContent() {
   const [artistInfo, setArtistInfo] = useState(null);

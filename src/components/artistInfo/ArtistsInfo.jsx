@@ -1,5 +1,5 @@
 import React from "react";
-import "./albums.css";
+import "./artistsInfo.css";
 
 function ArtistsInfo({ artist, albums }) {
   return (
@@ -18,8 +18,7 @@ function ArtistsInfo({ artist, albums }) {
             : "Genres not available"}
         </p>
         <p className="biography">{artist.biography}</p>
-        
-       
+    
         <a
           href={artist.artistUrl}
           target="_blank"
