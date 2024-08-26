@@ -7,7 +7,7 @@ O sistema será uma aplicação reativa simples que permite aos usuários pesqui
 ## TECNOLOGIAS
 
 - React.JS
-- [Api do Sportfy](https://github.com/safelydan/apiSpotifyArtists)
+- [Api do Spotify](https://github.com/safelydan/apiSpotifyArtists)
 - Kafka
 - JavaScrip
 
