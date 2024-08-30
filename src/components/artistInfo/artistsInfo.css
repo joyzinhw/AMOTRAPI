@@ -1,3 +1,13 @@
+.img-adjustable {
+  width: 100%;
+  height: auto;
+  max-width: none; /* Permite que a imagem ultrapasse seu contêiner, se necessário */
+  object-fit: cover; /* Mantém a proporção da imagem ao preencher o espaço */
+}
+
+/* .artist-info-container{ 
+  margin: 20px;
+}
 .album-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -48,4 +58,4 @@
   background-color: #1AA34A;
   color: white;
   text-decoration: none;
-}
+} */
