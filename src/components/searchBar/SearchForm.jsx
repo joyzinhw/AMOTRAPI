@@ -3,13 +3,15 @@ import axios from "axios";
 import "./searchForm.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { useNavigate } from "react-router-dom";
 
 
 function SearchForm({ setArtistInfo, color }) {
   const [artistName, setArtistName] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-  const fetchArtistInfo = async () => {
+  /*const fetchArtistInfo = async () => {
     try {
       const response = await axios.get(
         `http://localhost:2800/api/getArtistInfos`,
@@ -20,7 +22,26 @@ function SearchForm({ setArtistInfo, color }) {
 
       setArtistInfo(response.data);
       setError("");
+      navigate('/Artista');
 
+    } catch (err) {
+      setError("Error fetching artist info.");
+      setArtistInfo(null);
+    }
+  };*/
+  const fetchArtistInfo = async () => {
+    try {
+      const response = await axios.get(
+        `http://localhost:2800/api/getArtistInfos`,
+        {
+          params: { artistName },
+        }
+      );
+  
+      setArtistInfo(response.data);
+      setError("");
+      navigate('/Artista', { state: { artist: response.data.artist, albums: response.data.albums } }); 
+  
     } catch (err) {
       setError("Error fetching artist info.");
       setArtistInfo(null);

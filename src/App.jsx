@@ -3,9 +3,13 @@ import {createBrowserRouter, createRoutesFromElements, Route } from 'react-route
 import { RouterProvider } from 'react-router-dom';
 
 import LandingPage from './pages/LandingPage/LandingPage'
+import PageAboutArtist from './pages/PageAboutArtist/PageAboutArtist';
 
 const browserRouter = createBrowserRouter(createRoutesFromElements(
-  <Route path='/' element={<LandingPage />} />
+  <Route path='/'>
+    <Route index element={<LandingPage />} />
+    <Route path='/Artista' element={<PageAboutArtist />} />
+  </Route>
 ))
 
 function App() {
