@@ -6,11 +6,9 @@ function ArtistsInfo({ artist, albums }) {
   const [currentPage, setCurrentPage] = useState(1);
   const albumsPerPage = 9;
 
-
   const indexOfLastAlbum = currentPage * albumsPerPage;
   const indexOfFirstAlbum = indexOfLastAlbum - albumsPerPage;
   const currentAlbums = albums.slice(indexOfFirstAlbum, indexOfLastAlbum);
-
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -56,22 +54,31 @@ function ArtistsInfo({ artist, albums }) {
   return (
     <div className="container">
       <div className="py-5">
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">{artist.name} </h2>
+        <div className="row featurette">
+          <div className="col-md-7 order-md-2">
+            <h2 className="featurette-heading">{artist.name} </h2>
             <p className="text-muted">
               {artist.genres && artist.genres.length > 0
                 ? artist.genres.join(", ")
                 : "Genres not available"}
             </p>
-            <p class="lead">{artist.biography}</p>
-            <a
-              href={artist.artistUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-success btn-lg my-3">
-              Ver no Spotify
-            </a>
+            <p className="lead">{artist.biography}</p>
+            <div className="d-flex">
+              <a
+                href={artist.artistUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-success btn-lg my-3 me-2">
+                Ver no Spotify
+              </a>
+              <a
+                href={artist.topTracksUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary btn-lg my-3">
+                Top músicas
+              </a>
+            </div>
           </div>
           <div className="col-md-4 order-md-1">
             <img
@@ -82,7 +89,6 @@ function ArtistsInfo({ artist, albums }) {
               height="370"
             />
           </div>
-
         </div>
       </div>
 
@@ -91,7 +97,6 @@ function ArtistsInfo({ artist, albums }) {
           {currentAlbums.map((album, index) => {
             const dataFormatada = new Date(album.release_date).toLocaleDateString("pt-BR");
             return (
-
               <div className="col-md-4 mb-4" key={index}>
                 <div className="card shadow-sm" style={{ width: '100%' }}>
                   <img src={album.coverImage} className="card-img-top" alt={album.name} style={{ width: '100%', height: 'auto' }} />
