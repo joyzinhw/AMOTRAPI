@@ -42,8 +42,8 @@
 .album a {
   font-size: 0.9rem;
   color: #ffffff; /* Spotify green */
-  text-decoration: none;
-}
+  /* text-decoration: none;
+ /*}*/
 
 .album-bottom {
   border-radius: 15px;
@@ -58,4 +58,4 @@
   background-color: #1AA34A;
   color: white;
   text-decoration: none;
-} */
+}
