@@ -4,6 +4,7 @@ import "./searchForm.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
+
 function SearchForm({ setArtistInfo, color }) {
   const [artistName, setArtistName] = useState("");
   const [error, setError] = useState("");
@@ -19,6 +20,7 @@ function SearchForm({ setArtistInfo, color }) {
 
       setArtistInfo(response.data);
       setError("");
+
     } catch (err) {
       setError("Error fetching artist info.");
       setArtistInfo(null);
