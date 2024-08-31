@@ -76,7 +76,7 @@ function ArtistsInfo({ artist, albums }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary btn-lg my-3">
-                Top músicas
+                Músicas mais ouvidas
               </a>
             </div>
           </div>

@@ -40,7 +40,7 @@ function SearchForm({ setArtistInfo, color }) {
   
       setArtistInfo(response.data);
       setError("");
-      navigate('/Artista', { state: { artist: response.data.artist, albums: response.data.albums } }); 
+      navigate('/artistInfo', { state: { artist: response.data.artist, albums: response.data.albums } }); 
   
     } catch (err) {
       setError("Error fetching artist info.");

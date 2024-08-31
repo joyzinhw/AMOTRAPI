@@ -8,7 +8,7 @@ import PageAboutArtist from './pages/PageAboutArtist/PageAboutArtist';
 const browserRouter = createBrowserRouter(createRoutesFromElements(
   <Route path='/'>
     <Route index element={<LandingPage />} />
-    <Route path='/Artista' element={<PageAboutArtist />} />
+    <Route path='/artistInfo' element={<PageAboutArtist />} />
   </Route>
 ))
 
