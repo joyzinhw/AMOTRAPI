@@ -1,11 +1,4 @@
 import React, { useEffect, useState } from "react";
-<<<<<<< HEAD
-import axios from "axios";
-import "./TopTrack.css"; // Adicione estilos específicos, se necessário
-
-const TopTracks = () => {
-  const [tracks, setTracks] = useState([]);
-=======
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "./TopTrack.css"; 
@@ -14,7 +7,6 @@ function TopTracks() {
   const [tracks, setTracks] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const tracksPerPage = 9;
->>>>>>> 8483866 (add: desing do de top musicas)
 
   useEffect(() => {
     const fetchTracks = async () => {
@@ -29,25 +21,6 @@ function TopTracks() {
     fetchTracks();
   }, []);
 
-<<<<<<< HEAD
-  return (
-    <div className="carousel">
-    <h1 className= "title">Top 10 Faixas mais ouvidas</h1>
-      {tracks.map((track) => (
-        <div className="track" key={track.id}>
-          <img src={track.image_url} alt="Album Art" />
-          <h3>{track.name}</h3>
-          <p>{track.album}</p>
-          <audio controls>
-            <source src={track.preview_url} type="audio/mpeg" />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-      ))}
-    </div>
-  );
-};
-=======
   const indexOfLastTrack = currentPage * tracksPerPage;
   const indexOfFirstTrack = indexOfLastTrack - tracksPerPage;
   const currentTracks = tracks.slice(indexOfFirstTrack, indexOfLastTrack);
@@ -180,6 +153,5 @@ function TopTracks() {
     </div>
   );
 }
->>>>>>> 8483866 (add: desing do de top musicas)
 
 export default TopTracks;

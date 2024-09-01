@@ -16,8 +16,6 @@ img {
   width: 100%;
   border-radius: 10px;
 }
-<<<<<<< HEAD
-=======
 
 .audio-container {
   border: 1px solid #252424;
@@ -55,4 +53,3 @@ audio::-webkit-media-controls-volume-slider {
 audio::-webkit-media-controls-timeline {
   color: #1db954;
 }
->>>>>>> 8483866 (add: desing do de top musicas)
