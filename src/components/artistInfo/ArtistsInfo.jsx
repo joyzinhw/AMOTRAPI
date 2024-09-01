@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./artistsInfo.css";
 
 function ArtistsInfo({ artist, albums }) {
@@ -30,21 +30,31 @@ function ArtistsInfo({ artist, albums }) {
         startPage = 1;
         endPage = maxPagesToShow - 1;
         pageNumbers.push(...Array.from({ length: endPage }, (_, i) => i + 1));
-        pageNumbers.push('...');
+        pageNumbers.push("...");
         pageNumbers.push(totalPages);
       } else if (currentPage >= totalPages - Math.floor(maxPagesToShow / 2)) {
         startPage = totalPages - maxPagesToShow + 2;
         endPage = totalPages;
         pageNumbers.push(1);
-        pageNumbers.push('...');
-        pageNumbers.push(...Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i));
+        pageNumbers.push("...");
+        pageNumbers.push(
+          ...Array.from(
+            { length: endPage - startPage + 1 },
+            (_, i) => startPage + i
+          )
+        );
       } else {
         startPage = currentPage - Math.floor(maxPagesToShow / 2) + 1;
         endPage = currentPage + Math.floor(maxPagesToShow / 2) - 1;
         pageNumbers.push(1);
-        pageNumbers.push('...');
-        pageNumbers.push(...Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i));
-        pageNumbers.push('...');
+        pageNumbers.push("...");
+        pageNumbers.push(
+          ...Array.from(
+            { length: endPage - startPage + 1 },
+            (_, i) => startPage + i
+          )
+        );
+        pageNumbers.push("...");
         pageNumbers.push(totalPages);
       }
     }
@@ -68,14 +78,16 @@ function ArtistsInfo({ artist, albums }) {
                 href={artist.artistUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-success btn-lg my-3 me-2">
+                className="btn btn-success btn-lg my-3 me-2"
+              >
                 Ver no Spotify
               </a>
               <a
-                href={artist.topTracksUrl}
+                href={"/topTracks"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-primary btn-lg my-3">
+                className="btn btn-primary btn-lg my-3"
+              >
                 Músicas mais ouvidas
               </a>
             </div>
@@ -95,18 +107,34 @@ function ArtistsInfo({ artist, albums }) {
       <div className="container">
         <div className="row">
           {currentAlbums.map((album, index) => {
-            const dataFormatada = new Date(album.release_date).toLocaleDateString("pt-BR");
+            const dataFormatada = new Date(
+              album.release_date
+            ).toLocaleDateString("pt-BR");
             return (
               <div className="col-md-4 mb-4" key={index}>
-                <div className="card shadow-sm" style={{ width: '100%' }}>
-                  <img src={album.coverImage} className="card-img-top" alt={album.name} style={{ width: '100%', height: 'auto' }} />
+                <div className="card shadow-sm" style={{ width: "100%" }}>
+                  <img
+                    src={album.coverImage}
+                    className="card-img-top"
+                    alt={album.name}
+                    style={{ width: "100%", height: "auto" }}
+                  />
                   <div className="card-body">
                     <p className="card-text">{album.name}</p>
                     <div className="d-flex justify-content-between align-items-center">
                       <div className="btn-group">
-                        <a href={album.url} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline-secondary">Escutar no Spotify</a>
+                        <a
+                          href={album.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-sm btn-outline-secondary"
+                        >
+                          Escutar no Spotify
+                        </a>
                       </div>
-                      <small className="text-body-secondary">{dataFormatada}</small>
+                      <small className="text-body-secondary">
+                        {dataFormatada}
+                      </small>
                     </div>
                   </div>
                 </div>
@@ -118,22 +146,46 @@ function ArtistsInfo({ artist, albums }) {
 
       <nav aria-label="Navegação de página">
         <ul className="pagination justify-content-center">
-          <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
-            <button className="page-link" onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>Anterior</button>
+          <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
+            <button
+              className="page-link"
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              Anterior
+            </button>
           </li>
           {getPaginationItems().map((item, index) => (
-            <li key={index} className={`page-item ${item === currentPage ? 'active' : ''} ${item === '...' ? 'disabled' : ''}`}>
-              {item === '...' ? (
+            <li
+              key={index}
+              className={`page-item ${item === currentPage ? "active" : ""} ${
+                item === "..." ? "disabled" : ""
+              }`}
+            >
+              {item === "..." ? (
                 <span className="page-link">...</span>
               ) : (
-                <button className="page-link" onClick={() => handlePageChange(item)}>
+                <button
+                  className="page-link"
+                  onClick={() => handlePageChange(item)}
+                >
                   {item}
                 </button>
               )}
             </li>
           ))}
-          <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
-            <button className="page-link" onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>Próximo</button>
+          <li
+            className={`page-item ${
+              currentPage === totalPages ? "disabled" : ""
+            }`}
+          >
+            <button
+              className="page-link"
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              Próximo
+            </button>
           </li>
         </ul>
       </nav>
