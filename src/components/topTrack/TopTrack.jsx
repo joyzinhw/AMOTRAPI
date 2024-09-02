@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "./TopTrack.css"; 
+import Header from '../header/Header'
 
 function TopTracks() {
   const [tracks, setTracks] = useState([]);
@@ -77,6 +78,7 @@ function TopTracks() {
 
   return (
     <div className="container">
+      <Header />
       <div className="py-5">
         <h1 className="title">Top 10 Faixas mais ouvidas</h1>
         <div className="row">
